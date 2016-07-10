@@ -7,5 +7,8 @@ func greet(name: String? = nil) {
 }
 
 let args = Process.arguments
-let name: String? = args.count > 1 ? args[1] : nil
+var name: String? =  nil
+
+if args.count > 1 { name = args[1] }
+
 greet(name: name)
